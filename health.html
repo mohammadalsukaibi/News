@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" />
+    <title>News</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        type="text/css" />
+</head>
+
+<body id="root" onload="healthNews();">
+    <div class="title" style="background-color: rgb(255, 255, 255);">
+        <a href="index.html" id="title" style="margin-top: 20px; flex-grow:8 ;">MY NEWS</a>
+        <div class="search" style=" flex-grow: 8;">
+            <input type="text" class="css-input" />
+            <a href="#" class="myButton"><i class="search icon"></i></a>
+        </div>
+    </div>
+    
+    <!-- navbar -->
+    <div class="ui computer only grid centered"
+        style=" border-bottom: black 1px solid; margin: 0 70px; border-top: black 1px solid; ">
+        <div class="ui borderless huge menu secondary" style="margin: 10px 0px">
+            <a class="header item" href="business.html">Business</a>
+            <i class="circle icon" style="margin-top: 15px;"></i>
+            <a class="header item" href="health.html">Health</a>
+            <i class="circle icon" style="margin-top: 15px;"></i>
+            <a class="header item" href="entertainment.html">Entertainment</a>
+            <i class="circle icon" style="margin-top: 15px;"></i>
+            <a class="header item" href="tech.html">Technology</a>
+            <i class="circle icon" style="margin-top: 15px;"></i>
+            <a class="header item" href="sports.html">Sports</a>
+            <!-- <div class="item">
+                <a class="header" href="#root" style="color: black; font-weight: bolder; border-right: solid black 1px;">Project Name</a>
+            </div> -->
+        </div>
+    </div>
+    <!-- mobile navbar -->
+    <div class="ui tablet mobile only padded grid">
+        <div class="ui borderless fluid huge inverted menu">
+            <a class="header item" href="#root"></a>
+            <div class="right menu">
+                <div class="item">
+                    <button class="ui icon toggle basic inverted button">
+                        <i class="content icon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="ui vertical borderless fluid inverted menu">
+                <a class="header item" href="business.html">Business</a><hr>
+                <a class="header item" href="health.html">Health</a><hr>
+                <a class="header item" href="entertainment.html">Entertainment</a><hr>
+                <a class="header item" href="tech.html">Technology</a><hr>
+                <a class="header item" href="sports.html">Sports</a><br>
+            </div>
+        </div>
+    </div>
+    <!-- main section -->
+
+    <main id="main">
+        <div class="ui container center aligned">
+            <br><br>
+            <p id="title" style="font-size: 3rem;">Health news</p><br>
+        </div>
+    
+    
+        <div class="ui my-container grid stackable">
+            <div class="row" id="cards">
+                
+            </div>
+           
+        </div>
+    </main>
+    
+
+    
+
+
+    <script src="scripts/config.js"></script>
+    <script src="scripts/news.js"></script>
+    <script src="scripts/app.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".ui.toggle.button").click(function () {
+                $(".mobile.only.grid .ui.vertical.menu").toggle(200);
+            });
+        });
+    </script>
+</body>
+
+</html>

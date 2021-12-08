@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
+}
+
+#title{
+    font-size: 5rem;
+    font-family: 'Bebas Neue', cursive;
+    color: #000;
+
+}
+
+.title{
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+p.lead {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
+    color: #333333;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.ui.huge.header {
+    font-size: 36px;
+}
+
+.ui.inverted.menu {
+    border-radius: 0;
+    flex-wrap: wrap;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.ui.mobile.only.grid .ui.menu .ui.vertical.menu {
+    display: none;
+}
+
+.ui.inverted.menu .item {
+    color: rgb(157, 157, 157);
+    font-size: 16px;
+}
+
+.ui.inverted.menu .active.item {
+    background-color: #080808;
+}
+
+/* loader */
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #303131; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* search */
+
+.search{
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+
+.css-input {
+    /* margin-bottom: 30px; */
+    width: 30%;
+    padding: 6px;
+    padding-left: 20px;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: #747474;
+    background-color: #FFFFFF;
+    color: #878787;
+    border-style: solid;
+    border-radius: 10px 0px 0px 10px;
+    height: 35px;
+}
+.css-input:focus {
+    outline:none;
+}
+
+.myButton {
+	background-color:#000000;
+	border-radius: 0px 10px 10px 0px;
+	border:1px solid #000000;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+    height: 35px;
+}
+/* glide */
+
+.wrap {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.glide__slide {
+    /* border: 1px solid black; */
+    line-height: 100px;
+    margin: 0;
+}
+
+
+.glide__bullet{
+    background-color: rgb(97, 97, 97) !important;
+}
+
+.glide__bullet--active{
+    background-color: rgb(192, 53, 53) !important;
+}
+
+/* horizental card */
+
+.card-h{
+    background-color: rgba(240, 240, 240, 0.775);
+    border-radius: 00px;
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+.card-h img{
+    width: 30rem; 
+    border-radius: 0px;
+    object-fit: cover;
+}
+
+.card-h-info{
+    padding: 50px;
+}
+
+.h-date{
+
+}
+.h-title{
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.h-description{
+    color: gray;
+    font-weight: bolder;
+    height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card-h{
+        flex-direction: column;
+        width: 90%;
+    }
+    .card-h img{
+        width: 95%; 
+        border-radius: 20px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    .card-h-info{
+        padding: 10px;
+    }
+    .h-title{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    .h-description{
+        color: gray;
+        font-weight: bolder;
+        height: auto;
+    }
+}
+
+
+/* cards */
+
+.my-container{
+    width: 80%;
+    margin: 0 auto !important;
+    margin-top: 50px !important;
+}
+
+.card{
+    width: 30rem; 
+    color: black;
+    margin-bottom: 50px !important;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #F8F8F8; 
+	border: solid #000000 1px; 
+	box-shadow: -9px 9px 0 rgba(0, 0, 0, 1)  ; 
+	-webkit-box-shadow: -9px 9px 0 rgba(0, 0, 0, 1)  ; 
+	-moz-box-shadow: -9px 9px 0 rgba(0, 0, 0, 1)  ; 
+}
+
+
+.card img{
+    width: 30rem; 
+    height: 20rem;
+    object-fit: cover;
+}
+
+.news-title{
+    font-size: 20px;
+    font-weight: bolder;
+    height: 90px;
+}
+
+.news-description{
+    color: gray;
+    font-weight: bolder;
+    /* height: 70px; */
+    overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-height: X; /* fallback */
+  max-height: X * 2;
+
+}
+#card-info{
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1550px) {
+    .my-container{
+        width: 90%;
+        margin: 0 auto !important;
+    }
+
+    .card{
+        width: 24rem; 
+        color: rgb(0, 0, 0);
+        margin-bottom: 10px ;
+        margin: 0 auto;
+    }
+
+    .card img{
+        width: 24rem; 
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .card{
+        width: 20rem; 
+        color: rgb(0, 0, 0);
+        margin-bottom: 10px ;
+        margin: 0 auto;
+    }
+
+    .card img{
+        width: 20rem; 
+    }
+}
+@media only screen and (max-width: 600px) {
+    .card{
+        width: 24rem; 
+        color: black;
+        margin-bottom: 10px ;
+        margin: 0 auto;
+    }
+
+    .card img{
+        width: 24rem; 
+    }
+}
+
+/* small card */
+
+.card-sm{
+    width: 20rem; 
+    color: black;
+    margin-bottom: 50px !important;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #F8F8F8; 
+	border: solid #000000 1px; 
+	box-shadow: -9px 9px 0 rgba(0, 0, 0, 1)  ; 
+	-webkit-box-shadow: -9px 9px 0 rgba(0, 0, 0, 1)  ; 
+	-moz-box-shadow: -9px 9px 0 rgba(0, 0, 0, 1)  ; 
+}
+
+
+.card-sm img{
+    width: 20rem; 
+    height: 15rem;
+    object-fit: cover;
+}
+
+.recent-description{
+    height: 130px;
+}
+
+.recent-title{
+    height: 70px;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+/* weather */
+
+.weather{
+    background-color: rgba(240, 240, 240, 0.775);
+    box-shadow: -1px 2px 5px 0px rgba(215,215,215,0.85);
+    -webkit-box-shadow: -1px 2px 5px 0px rgba(215,215,215,0.85);
+    -moz-box-shadow: -1px 2px 5px 0px rgba(215,215,215,0.85);
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+.weather-icon{
+
+}
+.weather-temp p{
+    font-size: 4rem;
+}
