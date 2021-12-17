@@ -55,9 +55,10 @@ function customNews(){
 function topNews(){
     news.getNews()
     .then(results => {
-        console.log(results.articles);
-        new_articles = results.articles.slice(0,3)
+        top_article = results.articles.slice(0,1)
+        new_articles = results.articles.slice(1,4)
         all_articles = results.articles.slice(4,20)
+        top_article.map(showTop)
         new_articles.map(showRecent)
         all_articles.map(showNews)
     })
@@ -157,25 +158,22 @@ function showRecent(item){
 </div>`
 }
 
+function showTop(item){
+    let myDate = item.publishedAt;
+    let myDescription = item.description;
+    let myTitle = item.title;
 
-// function showCarosel(item){
-    
-//     const li = document.createElement('li');
-//     li.classList.add('glide__slide');
-//     li.innerHTML = `<div class="card-h">
-//     <img src="${item.urlToImage}" alt="">
-//     <div class="card-h-info">
-//         <p class="h-date">2021-7-19</p>
-//         <p class="h-title">Lorem ipsum dolor, adipisicing elit. Pariatur, placeat sint. Odit aliquid quis nobis consequuntur beatae, neque alias.</p>
-//         <p class="h-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores est dolorum sapiente dignissimos placeat velit qui aliquam repudiandae. Dolore ut molestias possimus exercitationem. Explicabo aliquam illum adipisci esse asperiores dicta itaque id animi provident possimus consequuntur doloribus maxime, dolore molestiae odio cupiditate! Vitae et eveniet nihil ipsam iste dolores, quo neque incidunt omnis molestias cum inventore corporis ex distinctio rerum minima veritatis ea sunt est asperiores esse maiores beatae! Veritatis, iste exercitationem quam ducimus doloremque nulla possimus deleniti excepturi quaerat?</p>
-//         <h3>Jane Doe</h3>
-//     </div>
-// </div>`
-    
-//     const ggg = document.querySelector('.glide__slides');
-//     ggg.appendChild(li);
-//     console.log('done');
-// }
+
+    document.querySelector('.card-h').innerHTML += `
+    <img id="img1" src="${item.urlToImage}" alt="">
+    <div class="card-h-info">
+        <p class="h-date">${myDate.slice(0,10)}</p>
+        <p class="h-title">${myTitle}</p>
+        <p class="h-description">${myDescription}</p>
+        <h3>${item.author ? item.author : "Jane doe"}</h3>
+    </div>
+    `
+}
 
 function showWeather(temp,city_name,country_code,description){
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];

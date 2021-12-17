@@ -113,26 +113,7 @@ p.lead {
 	text-shadow:0px 1px 0px #000000;
     height: 35px;
 }
-/* glide */
 
-.wrap {
-    max-width: 600px;
-    margin: 0 auto;
-}
-.glide__slide {
-    /* border: 1px solid black; */
-    line-height: 100px;
-    margin: 0;
-}
-
-
-.glide__bullet{
-    background-color: rgb(97, 97, 97) !important;
-}
-
-.glide__bullet--active{
-    background-color: rgb(192, 53, 53) !important;
-}
 
 /* horizental card */
 
@@ -142,6 +123,7 @@ p.lead {
     width: 70%;
     display: flex;
     margin: 0 auto;
+    margin-top: 30px;
 }
 .card-h img{
     width: 30rem; 
@@ -241,8 +223,14 @@ p.lead {
   max-height: X * 2;
 
 }
+
 #card-info{
     padding: 10px;
+}
+
+#card-info h4{
+    height: 5ex; /* 2.5ex for each visible line */
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 1550px) {
