@@ -13,7 +13,7 @@ A website that shows news with different categories and it will also show the cu
 - News API
 - Weather API
 
-##Main features
+## Main features
 - Displaying popular news on the homepage
 - View news based on thier categories such as health, sports.
 - Searching news based on keywords
